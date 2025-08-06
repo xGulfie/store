@@ -12,16 +12,19 @@ html(lang="en")
                 each p in products
                     a.item(href=p.url)
                         h2.item-title #{p.title.trim()}
-                        if p.items.length > 0
-                            span ✨on multiple items 
                         div.centered.bordered-top.rel
                             img(src=p.localImageUrl)
                             //- div
                                 span buy now on #{p.site}
-                            if p.price
+                            if p.price && p.price.indexOf('varies') == -1
                                 div.price= p.price.trim()
-                        
-                        div
-                            p= p.description.trim()
+                            // 'view on RedBubble' hover tip
+                        if p.items.length > 0
+                            p.description
+                                i available on #{p.items.length} products
+
+                        if p.description
+                            div
+                                p.description= p.description.trim()
 
                     

@@ -1,12 +1,22 @@
 {
   "products": [
     {
+      "url": "https://ko-fi.com/s/210adff01a",
+      "site": "Ko-fi",
+      "imageUrl": "https://storage.ko-fi.com/cdn/useruploads/post/8c70b6b1-350a-4c6a-9f5d-07abffc722f0_cover3.jpg",
+      "items": [],
+      "price": "\n                                        $20 ",
+      "title": "Mastodon Gold",
+      "description": "Acquire a certificate proving you have a Mastodon Gold account, making you the envy of the fediverse...",
+      "localImageUrl": "img/Mastodon-Gold.jpg"
+    },
+    {
       "url": "https://gulfie.printful.me/product/mens-slim-fit-polo",
       "site": "Printful",
       "imageUrl": "https://cdn.printful.me/t/quick-stores/products/w168/38807-791-688c228499bad__360",
       "title": "Illusory Freddie Polo",
       "items": [],
-      "price": "$35.00+",
+      "price": "$35+",
       "description": "",
       "localImageUrl": "img/Illusory-Freddie-Polo"
     },
@@ -36,7 +46,7 @@
       "imageUrl": "https://cdn.printful.me/t/quick-stores/products/w168/38807-276-68210a387fab3__360",
       "title": "Freddie Tank Top",
       "items": [],
-      "price": "$24.00+",
+      "price": "$24+",
       "description": "",
       "localImageUrl": "img/Freddie-Tank-Top"
     },
@@ -56,19 +66,9 @@
       "imageUrl": "https://cdn.printful.me/t/quick-stores/products/w168/15924419-630-6820fd0a76ab3__360",
       "title": "Freddie bandana",
       "items": [],
-      "price": "$13.00+",
+      "price": "$13+",
       "description": "",
       "localImageUrl": "img/Freddie-bandana"
-    },
-    {
-      "url": "https://ko-fi.com/s/210adff01a",
-      "site": "Ko-fi",
-      "imageUrl": "https://storage.ko-fi.com/cdn/useruploads/post/8c70b6b1-350a-4c6a-9f5d-07abffc722f0_cover3.jpg",
-      "items": [],
-      "price": "\n                                        $20 ",
-      "title": "Mastodon Gold",
-      "description": "Acquire a certificate proving you have a Mastodon Gold account, making you the envy of the fediverse...",
-      "localImageUrl": "img/Mastodon-Gold.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/168657647",

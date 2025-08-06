@@ -124,7 +124,7 @@ assert.ok(kofiProducts.length > 0)
 const rbDesigns = await getRbDesigns(browser, 'https://www.redbubble.com/people/gulfie/explore/');
 assert.ok(rbDesigns.length > 0)
 
-const allProducts = [...printfulDesigns,...kofiProducts, ...rbDesigns];
+const allProducts = [...kofiProducts,...printfulDesigns, ...rbDesigns];
 
 // hydrate the allproducts
 allProducts.forEach((p)=>{
@@ -134,6 +134,7 @@ allProducts.forEach((p)=>{
     if (p.price.toLowerCase().indexOf('from') > -1){
         p.price = p.price.replace(/[^$.0-9]/g,'')+'+';
     }
+    p.price=p.price.replace('.00','')
 })
 
 fs.writeFileSync('src/products.json',JSON.stringify({products:allProducts},null,2))
