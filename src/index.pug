@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Gulfie's Shop!
+        link(rel="stylesheet" href="./style.css")
+    body 
+        main
+            h1.title Gulfie's Shop!
+            .products
+                each p in products
+                    a.item(href=p.url)
+                        h2.item-title #{p.title.trim()} #{p.items.length>0?'(on multiple items)':''}
+                        div.centered.bordered-top.rel
+                            img(src=p.localImageUrl)
+                            //- div
+                                span buy now on #{p.site}
+                            if p.price
+                                div.price= p.price.trim()
+                        
+                        div
+                            p= p.description.trim()
+
+                    

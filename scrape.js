@@ -134,6 +134,9 @@ allProducts.forEach((p)=>{
     const newUrl = p.title.replace(/\W/g,'-')+path.parse(p.imageUrl).ext;
     console.log(newUrl)
     p.localImageUrl = path.posix.join('./img/', newUrl)
+    if (p.price.toLowerCase().indexOf('from') > -1){
+        p.price = p.price.replace(/[^$.0-9]/g,'')+'+';
+    }
 })
 
 fs.writeFileSync('products.json',JSON.stringify({products:allProducts},null,2))

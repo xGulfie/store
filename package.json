@@ -5,15 +5,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sh build.sh",
-    "scrape":"node scrape.js",
-    "all":"npm i && npm run-script scrape && npm run-script build"
+    "scrape": "node scrape.js",
+    "all": "npm i && npm run-script scrape && npm run-script build"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "express": "^5.1.0",
+    "hound": "^1.0.5",
+    "http-server": "^14.1.1",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "puppeteer": "^24.15.0"
+    "puppeteer": "^24.15.0",
+    "serve-static": "^2.2.0"
   }
 }

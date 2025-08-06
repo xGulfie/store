@@ -1,0 +1,60 @@
+body{
+    background:#fff;
+    color:black;
+    display:flex;
+    justify-content: center;
+    margin:2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    display:block;
+}
+main{
+    display:block;
+    width:100%;
+    max-width: 1200px;
+}
+.products {
+    display:grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.item{
+    width:300px;
+    border:solid 1px #ddd;
+    border-radius: 0.2rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+.item .item-title{
+    margin: 0.5rem;
+}
+.item img{
+    width:300px;
+    object-fit:cover;
+}
+.centered{
+    display:flex;
+    justify-content: center;
+}
+.bordered-top{
+    border-top: solid 1px #ddd;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+.rel{
+    position: relative;
+}
+.price{
+    position:absolute;
+    top:0;
+    right:0;
+    background:rgb(31, 225, 13);
+    color:white;
+    font-weight: bold;
+    padding:0.2rem;
+    border-radius: 0.2rem;
+    margin: 0.3rem;
+    font-size: 1.2rem;
+}
