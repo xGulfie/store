@@ -1,0 +1,19 @@
+{
+  "name": "scrapify",
+  "version": "1.0.0",
+  "main": "scrape-rb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sh build.sh",
+    "scrape":"node scrape.js",
+    "all":"npm i && npm run-script scrape && npm run-script build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "pug": "^3.0.3",
+    "pug-cli": "^1.0.0-alpha6",
+    "puppeteer": "^24.15.0"
+  }
+}
