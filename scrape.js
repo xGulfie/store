@@ -51,6 +51,7 @@ async function getPrintfulDesigns(browser, url){
     await page.setViewport({width: 1080, height: 1024});
 
     await page.waitForSelector('a.flex') // wait for them to show up lol
+    await page.waitForSelector('img.object-contain.object-center')
 
     const productLinks = await page.evaluate(`
         Array.from(document.querySelectorAll('a.flex')).filter(a=>a.href.indexOf('product') > -1).map(a=>a.href)
@@ -77,10 +78,6 @@ async function getPrintfulDesigns(browser, url){
         })
     }
 
-    if (products.length < 1){
-        console.error('oh no did not get any printful stuff??')
-        exit(1)
-    }
     return products
 }
 
@@ -111,7 +108,7 @@ async function getKofiProducts(browser, url){
 async function downloadImages(){
     const page = await browser.newPage()
     for (var i = 0; i < allProducts.length; i++){
-        await downloadImage(page, allProducts[i].imageUrl, allProducts[i].localImageUrl)
+        await downloadImage(page, allProducts[i].imageUrl, path.posix.join('./dist/',allProducts[i].localImageUrl))
     }
 }
 async function downloadImage(page, src, dst){
@@ -121,11 +118,11 @@ async function downloadImage(page, src, dst){
 }
 
 const printfulDesigns = await getPrintfulDesigns(browser, 'https://gulfie.printful.me')
+assert.ok(printfulDesigns.length > 0)
 const kofiProducts = await getKofiProducts(browser, 'https://ko-fi.com/gulfie/shop')
+assert.ok(kofiProducts.length > 0)
 const rbDesigns = await getRbDesigns(browser, 'https://www.redbubble.com/people/gulfie/explore/');
-assert.ok(printfulDesigns.legnth > 0)
-assert.ok(kofiProducts.legnth > 0)
-assert.ok(rbDesigns.legnth > 0)
+assert.ok(rbDesigns.length > 0)
 
 const allProducts = [...printfulDesigns,...kofiProducts, ...rbDesigns];
 
@@ -139,7 +136,7 @@ allProducts.forEach((p)=>{
     }
 })
 
-fs.writeFileSync('products.json',JSON.stringify({products:allProducts},null,2))
+fs.writeFileSync('src/products.json',JSON.stringify({products:allProducts},null,2))
 
 await downloadImages()
 await browser.close();

@@ -11,7 +11,9 @@ html(lang="en")
             .products
                 each p in products
                     a.item(href=p.url)
-                        h2.item-title #{p.title.trim()} #{p.items.length>0?'(on multiple items)':''}
+                        h2.item-title #{p.title.trim()}
+                        if p.items.length > 0
+                            span ✨on multiple items 
                         div.centered.bordered-top.rel
                             img(src=p.localImageUrl)
                             //- div
