@@ -6,6 +6,10 @@ body{
     margin:2rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.store-header>*, .store-footer>*{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .title{
       font-weight:bolder;
     display:block;

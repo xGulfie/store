@@ -7,8 +7,11 @@ html(lang="en")
         link(rel="stylesheet" href="./style.css")
     body 
         main
-            h1.title Gulfie's Shop!
-            h2.subtitle I have stuff in a few stores, this is the best place to see <i>everything</i> I have available
+            .store-header
+                h1.title Gulfie's Shop!
+                h2.subtitle This is the best place to see <i>everything</i> I have to sell
+                p All links go to external sites like RedBubble or Ko-Fi. See a design you want on a different product? Just let me know and I'll try and make it available.
+
             .products
                 each p in products
                     a.item(href=p.url)
@@ -32,5 +35,6 @@ html(lang="en")
                                 p.description= p.description.trim()
                         //- if p.mature 
                         //-     span MATURE!
+            .store-footer 
 
                     
