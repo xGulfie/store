@@ -1,8 +1,9 @@
 import puppeteer from 'puppeteer';
-import fs from 'node:fs'
 import path from 'node:path'
 import { exit } from 'node:process';
 import assert from 'node:assert'
+import fs from 'node:fs/promises'
+import JSON5 from 'json5' 
 
 // Or import puppeteer from 'puppeteer-core';
 
@@ -14,7 +15,7 @@ async function getRbDesigns(browser, url){
     const page = await browser.newPage();
 
     // Navigate the page to a URL.
-    await page.goto(url);
+    await page.goto(url,{ waitUntil: 'networkidle2' });
 
     // Set screen size.
     await page.setViewport({width: 1080, height: 1024});
@@ -22,6 +23,15 @@ async function getRbDesigns(browser, url){
 
     const productLinks = await page.evaluate(`
         Array.from(document.querySelectorAll('a')).map(a=>a.getAttribute('href')).filter(a=>a.indexOf('/shop/ap/') > -1)
+    `)
+    const productsAreMature = await page.evaluate(`
+        Array.from(document.querySelectorAll('a')).filter(a=>a.getAttribute('href').indexOf('/shop/ap/') > -1).map(
+            (anchor)=>{
+                let imgs = Array.from(anchor.querySelectorAll('img'))
+                let svgImgs = Array.from(anchor.querySelectorAll('img')).filter(img=>img.getAttribute('src').indexOf('svg') > -1)
+                return svgImgs.length == imgs.length; // SVGs for all images means it is mature
+            }
+        )
     `)
 
     const rbDesigns=[]
@@ -32,9 +42,11 @@ async function getRbDesigns(browser, url){
             site: 'RedBubble',
             price:'varies by product',
             title: await page.evaluate(`document.querySelector('h1').textContent`),
-            description: await page.evaluate(`document.querySelector('h1~div>div').textContent`),
+            description: "",
+            // description: await page.evaluate(`document.querySelector('h1~div>div').textContent`),
             imageUrl: await page.evaluate(`document.querySelector('main div>div>div>div>div>div>img').src`),
-            items: await page.evaluate(`Array.from(document.querySelectorAll('main a>div>div>div>div>span')).map(l=>l.textContent)`)
+            items: await page.evaluate(`Array.from(document.querySelectorAll('main a>div>div>div>div>span')).map(l=>l.textContent)`),
+            mature: productsAreMature[i]
         });
     }
     return rbDesigns
@@ -105,16 +117,25 @@ async function getKofiProducts(browser, url){
 
 }
 
-async function downloadImages(){
-    const page = await browser.newPage()
-    for (var i = 0; i < allProducts.length; i++){
-        await downloadImage(page, allProducts[i].imageUrl, path.posix.join('./dist/',allProducts[i].localImageUrl))
-    }
+async function getCustomProducts(){
+    return JSON5.parse(await fs.readFile('src/custom_products.json5'))
+        .map(p=>p.isCustom=true)
 }
+
 async function downloadImage(page, src, dst){
     const viewSource = await page.goto(src)
     const buffer = await viewSource.buffer()
-    fs.writeFileSync(dst, buffer)
+    await fs.writeFile(dst, buffer)
+}
+
+async function downloadImages(browser,products){
+    const page = await browser.newPage()
+    for (var i = 0; i < products.length; i++){
+        if (products[i].isCustom){
+            continue
+        }
+        await downloadImage(page, products[i].imageUrl, path.posix.join('./dist/',products[i].localImageUrl))
+    }
 }
 
 const printfulDesigns = await getPrintfulDesigns(browser, 'https://gulfie.printful.me')
@@ -124,20 +145,25 @@ assert.ok(kofiProducts.length > 0)
 const rbDesigns = await getRbDesigns(browser, 'https://www.redbubble.com/people/gulfie/explore/');
 assert.ok(rbDesigns.length > 0)
 
-const allProducts = [...kofiProducts,...printfulDesigns, ...rbDesigns];
+const allProducts = [...await getCustomProducts(), ...kofiProducts,...printfulDesigns, ...rbDesigns];
 
 // hydrate the allproducts
 allProducts.forEach((p)=>{
-    const newUrl = p.title.replace(/\W/g,'-')+path.parse(p.imageUrl).ext;
-    console.log(newUrl)
-    p.localImageUrl = path.posix.join('./img/', newUrl)
+    if (!p.isCustom){
+        const newUrl = p.title.replace(/\W/g,'-')+path.parse(p.imageUrl).ext;
+        p.localImageUrl = path.posix.join('./img/', newUrl)
+    }
     if (p.price.toLowerCase().indexOf('from') > -1){
         p.price = p.price.replace(/[^$.0-9]/g,'')+'+';
     }
     p.price=p.price.replace('.00','')
+
+    p.title = p.title.replace(
+        /\w\S*/g,
+        text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+    );
 })
 
-fs.writeFileSync('src/products.json',JSON.stringify({products:allProducts},null,2))
-
-await downloadImages()
+await fs.writeFile('src/products.json',JSON.stringify({products:allProducts},null,2))
+await downloadImages(browser,allProducts)
 await browser.close();

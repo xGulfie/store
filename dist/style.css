@@ -6,9 +6,15 @@ body{
     margin:2rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1{
+.title{
+      font-weight:bolder;
     display:block;
     margin:0 1rem;
+}
+.subtitle{
+    font-weight: normal;
+    display: block;
+    margin: 1rem;
 }
 main{
     display:block;
@@ -17,7 +23,38 @@ main{
 }
 .products {
     display:grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+.products{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.item:nth-child(2n){
+    justify-self: end;
+}
+.item:nth-child(2n-1){
+    justify-self: start;
+}
+@media all and (min-width:1050px){
+    .products{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .item:nth-child(3n){
+        justify-self: end;
+    }
+    .item:nth-child(3n-1){
+        justify-self: center;
+    }
+    .item:nth-child(3n-2){
+        justify-self: start;
+    }
+}
+
+@media all and (max-width:724px){
+    .products{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .item{
+        justify-self: center !important;
+    }
 }
 .item{
     width:300px;
@@ -28,6 +65,7 @@ main{
     align-self: start;
     transition: transform 0.1s ease-out;
     background:white;
+    justify-self:stretch;
 }
 .item:hover{
     transform: scale(1.03);
@@ -69,6 +107,31 @@ a{
     border-radius: 0.2rem;
     margin: 0.3rem;
     font-size: 1.2rem;
+}
+.sitecontain{
+    overflow: hidden;
+    position: absolute;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+}
+.site{
+    transform: translate(0,3rem);
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:rgb(255, 255, 255);
+    color:black;
+    font-weight: bold;
+    padding:0.2rem;
+    border-radius: 0.2rem;
+    margin: 0.3rem;
+    font-size: 1.2rem;
+    transition: all 0.1s ease-in;
+}
+.item:hover .site{
+    transform: translate(0);
 }
 .description{
     margin:1rem;

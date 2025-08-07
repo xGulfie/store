@@ -54,7 +54,7 @@
       "url": "https://gulfie.printful.me/product/leather-goose-wall-art",
       "site": "Printful",
       "imageUrl": "https://cdn.printful.me/t/quick-stores/products/w168/15924419-1-68210784119e8__360",
-      "title": "leather goose wall art",
+      "title": "Leather Goose Wall Art",
       "items": [],
       "price": "$7.50+",
       "description": "",
@@ -64,7 +64,7 @@
       "url": "https://gulfie.printful.me/product/freddie-bandana",
       "site": "Printful",
       "imageUrl": "https://cdn.printful.me/t/quick-stores/products/w168/15924419-630-6820fd0a76ab3__360",
-      "title": "Freddie bandana",
+      "title": "Freddie Bandana",
       "items": [],
       "price": "$13+",
       "description": "",
@@ -74,9 +74,9 @@
       "url": "https://www.redbubble.com/shop/ap/168657647",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "I WILL PROTECT MY TRANS NEIGHBORS - glitchier",
-      "description": "glitchier version",
-      "imageUrl": "https://ih1.redbubble.net/image.5771359058.7647/flat,600x600,075,f.jpg",
+      "title": "I Will Protect My Trans Neighbors",
+      "description": "",
+      "imageUrl": "https://ih1.redbubble.net/image.5896850611.7647/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
         "Boxy T-Shirt",
@@ -126,14 +126,15 @@
         "Greeting Card",
         "Magnet"
       ],
-      "localImageUrl": "img/I-WILL-PROTECT-MY-TRANS-NEIGHBORS---glitchier.jpg"
+      "mature": true,
+      "localImageUrl": "img/I-WILL-PROTECT-MY-TRANS-NEIGHBORS.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/164481481",
       "site": "RedBubble",
       "price": "varies by product",
       "title": "Puffins Football Logo Gulfie",
-      "description": "Show your team pride with this officially licensed Puffins Football merch, featuring Gulfie the Puffin!",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5642186819.1481/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -173,6 +174,7 @@
         "Socks",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/Puffins-Football-Logo-Gulfie.jpg"
     },
     {
@@ -180,7 +182,7 @@
       "site": "RedBubble",
       "price": "varies by product",
       "title": "Vintage Kitchen Goose - Leather Edition",
-      "description": "power up your kitchen decor with leather goose",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5636231152.7044/flat,600x600,075,f.jpg",
       "items": [
         "Holographic Sticker",
@@ -201,14 +203,15 @@
         "Spiral Notebook",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/Vintage-Kitchen-Goose---Leather-Edition.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/155838034",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "Freddie the Dolphin Bubble Party 2",
-      "description": "wheee freddie is back and ready to party! ",
+      "title": "Freddie The Dolphin Bubble Party 2",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5362315212.8034/flat,600x600,075,f.jpg",
       "items": [
         "Mouse Pad",
@@ -242,14 +245,15 @@
         "Spiral Notebook",
         "Apron"
       ],
+      "mature": false,
       "localImageUrl": "img/Freddie-the-Dolphin-Bubble-Party-2.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/155745686",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "Freddie the Sparkle Dolphin Bubble Party",
-      "description": "Freddie the Pink and Yellow Sparkledolphin is ready to party! Here he is! ",
+      "title": "Freddie The Sparkle Dolphin Bubble Party",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5359323167.5686/flat,600x600,075,f.jpg",
       "items": [
         "Mouse Pad",
@@ -285,14 +289,15 @@
         "Spiral Notebook",
         "Apron"
       ],
+      "mature": false,
       "localImageUrl": "img/Freddie-the-Sparkle-Dolphin-Bubble-Party.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/155741751",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "What's in my pants? A cloaca, that's what!",
-      "description": "so you wanna know what's in my pants? Don't ask if you don't wanna know, buckaroo.",
+      "title": "What's In My Pants? A Cloaca, That's What!",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5359229028.1751/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -332,14 +337,15 @@
         "Apron",
         "Magnet"
       ],
+      "mature": true,
       "localImageUrl": "img/What-s-in-my-pants--A-cloaca--that-s-what-.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/151471544",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "Big Puffs - BIG SEX not TinySex",
-      "description": "BIG PUFFS brand understands that sometimes you don't understand what the fuck people are talking about on the internet\r\n\r\nHe has sunglasses ... Read more",
+      "title": "Big Puffs - Big Sex Not Tinysex",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.5212009160.1544/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -366,14 +372,15 @@
         "Drawstring Bag",
         "Cotton Tote Bag"
       ],
+      "mature": false,
       "localImageUrl": "img/Big-Puffs---BIG-SEX-not-TinySex.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/108921655",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "three gull burg",
-      "description": "truly we have been blessed!",
+      "title": "Three Gull Burg",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.3516988954.1655/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -406,14 +413,15 @@
         "Short Sleeve Baby One-Piece",
         "Toddler Pullover Hoodie"
       ],
+      "mature": false,
       "localImageUrl": "img/three-gull-burg.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/95442434",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "gulfie army",
-      "description": "there are many of them",
+      "title": "Gulfie Army",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.3001522361.2434/flat,600x600,075,f.jpg",
       "items": [
         "iPhone Magsafe Tough Case",
@@ -445,14 +453,15 @@
         "Spiral Notebook",
         "Jigsaw Puzzle"
       ],
+      "mature": false,
       "localImageUrl": "img/gulfie-army.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/87528097",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "blob gulfie puffin (no border)",
-      "description": "it is he",
+      "title": "Blob Gulfie Puffin (No Border)",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.2700626684.8097/flat,600x600,075,f.jpg",
       "items": [
         "Holographic Sticker",
@@ -461,14 +470,15 @@
         "Transparent Sticker",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/blob-gulfie-puffin--no-border-.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/87526224",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "blob gulfie puffin",
-      "description": "it is he",
+      "title": "Blob Gulfie Puffin",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.2700591965.6224/flat,600x600,075,f.jpg",
       "items": [
         "Holographic Sticker",
@@ -481,14 +491,15 @@
         "Pin",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/blob-gulfie-puffin.jpg"
     },
     {
       "url": "https://www.redbubble.com/shop/ap/86791318",
       "site": "RedBubble",
       "price": "varies by product",
-      "title": "Triple Gay Pansexual Flag (rectangular)",
-      "description": "Show everyone how absolutely gay you are, for everyone.",
+      "title": "Triple Gay Pansexual Flag (Rectangular)",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.2672597845.1318/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -557,6 +568,7 @@
         "Hardcover Journal",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/Triple-Gay-Pansexual-Flag--rectangular-.jpg"
     },
     {
@@ -564,7 +576,7 @@
       "site": "RedBubble",
       "price": "varies by product",
       "title": "Triple Gay Pansexual Flag (Square)",
-      "description": "What's gayer than being gay? Triple gay. Show them all.",
+      "description": "",
       "imageUrl": "https://ih1.redbubble.net/image.2672539562.9720/flat,600x600,075,f.jpg",
       "items": [
         "Oversized T-Shirt",
@@ -623,57 +635,8 @@
         "Spiral Notebook",
         "Magnet"
       ],
+      "mature": false,
       "localImageUrl": "img/Triple-Gay-Pansexual-Flag--Square-.jpg"
-    },
-    {
-      "url": "https://www.redbubble.com/shop/ap/71392977",
-      "site": "RedBubble",
-      "price": "varies by product",
-      "title": "Shit (Shipt logo parody)",
-      "description": "It's a parody of shipt's new logo",
-      "imageUrl": "https://ih1.redbubble.net/image.2140376057.2977/flat,600x600,075,f.jpg",
-      "items": [
-        "Oversized T-Shirt",
-        "Boxy T-Shirt",
-        "Holographic Sticker",
-        "Active T-Shirt",
-        "Baseball ¾ Sleeve T-Shirt",
-        "Classic T-Shirt",
-        "Graphic T-Shirt",
-        "Lightweight Hoodie",
-        "Lightweight Sweatshirt",
-        "Long Sleeve T-Shirt",
-        "Pullover Hoodie",
-        "Pullover Sweatshirt",
-        "Racerback Tank Top",
-        "Essential T-Shirt",
-        "Tank Top",
-        "Tri-blend T-Shirt",
-        "V-Neck T-Shirt",
-        "Zipped Hoodie",
-        "Fitted Scoop T-Shirt",
-        "Fitted T-Shirt",
-        "Fitted V-Neck T-Shirt",
-        "Relaxed Fit T-Shirt",
-        "Sticker",
-        "Glossy Sticker",
-        "Laptop Skin",
-        "Laptop Sleeve",
-        "Transparent Sticker",
-        "Art Board Print",
-        "Art Print",
-        "Canvas Print",
-        "Framed Art Print",
-        "Photographic Print",
-        "Postcard",
-        "Poster",
-        "Cotton Tote Bag",
-        "Pin",
-        "Zipper Pouch",
-        "Greeting Card",
-        "Magnet"
-      ],
-      "localImageUrl": "img/Shit--Shipt-logo-parody-.jpg"
     }
   ]
 }

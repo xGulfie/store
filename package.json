@@ -6,6 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "sh build.sh",
     "scrape": "node scrape.js",
+    "dev": "node dev.js",
     "all": "npm i && npm run-script scrape && npm run-script build"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "express": "^5.1.0",
     "hound": "^1.0.5",
     "http-server": "^14.1.1",
+    "json5": "^2.2.3",
     "pug": "^3.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "puppeteer": "^24.15.0",

@@ -2,9 +2,13 @@ const hound = require('hound')
 const childProcess = require('child_process')
 var express = require('express')
 var serveStatic = require('serve-static')
+const process = require('process')
 
 function build(){
-    childProcess.spawn('sh',['build.sh'])
+    var proc = childProcess.spawn('sh',['build.sh'])
+    proc.stdout.pipe(process.stdout)
+    proc.stderr.pipe(process.stderr)
+    // don't really care if it exits 1 lol
 }
 const watcher=hound.watch('src')
 watcher.on('create',build)

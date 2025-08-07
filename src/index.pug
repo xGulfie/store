@@ -8,6 +8,7 @@ html(lang="en")
     body 
         main
             h1.title Gulfie's Shop!
+            h2.subtitle I have stuff in a few stores, this is the best place to see <i>everything</i> I have available
             .products
                 each p in products
                     a.item(href=p.url)
@@ -18,13 +19,18 @@ html(lang="en")
                                 span buy now on #{p.site}
                             if p.price && p.price.indexOf('varies') == -1
                                 div.price= p.price.trim()
+                            if p.site 
+                                div.sitecontain
+                                    div.site Buy it on #{p.site.trim()}
                             // 'view on RedBubble' hover tip
                         if p.items.length > 0
                             p.description
-                                i available on #{p.items.length} products
+                                i Available on #{p.items.length} products
 
                         if p.description
                             div
                                 p.description= p.description.trim()
+                        //- if p.mature 
+                        //-     span MATURE!
 
                     
